@@ -1,20 +1,22 @@
-package com.safeschool.admin.annotation;
+package com.jiangdong.annotation;
 
 import java.lang.annotation.*;
 
 /**
  * @author jiangdong
- * @title: Printing
- * @projectName safe-school-admin
+ * @title: Column
  * @description: TODO
- * @date 2019/10/29 002915:18
+ * @date 2020-11-14 15:42
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.FIELD)
 @Inherited
 @Documented
-public @interface PrintingColumn {
+public @interface Column {
 
     String name() default "";
 
+    String timeFormat() default "";
+
+    boolean rate() default false;
 }
